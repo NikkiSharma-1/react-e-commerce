@@ -1,4 +1,5 @@
 import Products from "./components/Products/Products";
+import CartProduct from "./components/Cart/CartProduct";
 
 function App() {
   const productsArr = [{
@@ -24,6 +25,7 @@ function App() {
   return (
     <div>
       <h2>The Generics</h2>
+      <CartProduct />
       <Products title={productsArr[0].title} price={productsArr[0].price} imageUrl={productsArr[0].imageUrl} />
       <Products title={productsArr[1].title} price={productsArr[1].price} imageUrl={productsArr[1].imageUrl} />
       <Products title={productsArr[2].title} price={productsArr[2].price} imageUrl={productsArr[2].imageUrl} />

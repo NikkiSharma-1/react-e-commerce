@@ -2,6 +2,7 @@ import Products from "./components/Products/Products";
 import Header from "./components/Header";
 import About from "./Pages/About"
 import Cart from "./components/Cart/Cart";
+import Home from "./Pages/Home";
 import {  Route } from "react-router-dom";
 
 function App() {
@@ -35,6 +36,9 @@ function App() {
       <Products title={productsArr[3].title} price={productsArr[3].price} imageUrl={productsArr[3].imageUrl} />
       <Route path="/about">
             <About />
+          </Route>
+          <Route path="/home">
+            <Home />
           </Route>
     </div>
   );

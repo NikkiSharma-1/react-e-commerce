@@ -1,5 +1,8 @@
 import Products from "./components/Products/Products";
+import Header from "./components/Header";
+import About from "./Pages/About"
 import Cart from "./components/Cart/Cart";
+import {  Route } from "react-router-dom";
 
 function App() {
   const productsArr = [{
@@ -24,12 +27,15 @@ function App() {
     }];
   return (
     <div>
-      <h2>The Generics</h2>
+     <Header/>
       <Cart />
       <Products title={productsArr[0].title} price={productsArr[0].price} imageUrl={productsArr[0].imageUrl} />
       <Products title={productsArr[1].title} price={productsArr[1].price} imageUrl={productsArr[1].imageUrl} />
       <Products title={productsArr[2].title} price={productsArr[2].price} imageUrl={productsArr[2].imageUrl} />
       <Products title={productsArr[3].title} price={productsArr[3].price} imageUrl={productsArr[3].imageUrl} />
+      <Route path="/about">
+            <About />
+          </Route>
     </div>
   );
 }

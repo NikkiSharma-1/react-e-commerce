@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import About from "./Pages/About"
 import Cart from "./components/Cart/Cart";
 import Home from "./Pages/Home";
+import ContactUs from "./Pages/ContactUs";
 import {  Route } from "react-router-dom";
 
 function App() {
@@ -26,6 +27,20 @@ function App() {
     price: 100,
     imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%204.png',
     }];
+
+    const submitUserDetails = async (details) => {
+      const response = await fetch(
+        "https://react-http-44f2c-default-rtdb.firebaseio.com/users.json",
+        {
+          method: "POST",
+          body: JSON.stringify(details),
+          headers: {
+            "Context-Type": "application/json",
+          },
+        }
+      );
+      const data = await response.json();
+    console.log(data);
   return (
     <div>
      <Header/>
@@ -40,8 +55,12 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
+          <Route path="/contact">
+            <ContactUs getUserDetails={submitUserDetails} />
+          </Route>
     </div>
   );
+}
 }
 
 export default App;

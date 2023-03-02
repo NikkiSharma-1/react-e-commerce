@@ -1,6 +1,6 @@
 import React, { useContext, useRef, useState } from "react";
 import { useHistory } from "react-router-dom";
-import AuthContext from "../store/auth-context";
+import AuthContext from "../Store/auth-context";
 import "./Login.module.css";
 
 const Login = () => {

@@ -1,6 +1,6 @@
 // import axios from "axios";
 import React, { useContext } from "react";
-// import AuthContext from "../../store/auth-context";
+import AuthContext from "../../store/auth-context";
 import CartContext from "../../Store/cart-context";
 
 import "./Cart.css";

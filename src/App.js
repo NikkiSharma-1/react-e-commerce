@@ -1,10 +1,10 @@
 import Products from "./components/Products/Products";
 import Header from "./components/Header";
-import About from "./Pages/About"
+//import About from "./Pages/About"
 import Cart from "./components/Cart/Cart";
-import Home from "./Pages/Home";
-import ContactUs from "./Pages/ContactUs";
-import {  Route } from "react-router-dom";
+//import Home from "./Pages/Home";
+//import ContactUs from "./Pages/ContactUs";
+//import {  Route } from "react-router-dom";
 
 function App() {
   const productsArr = [{
@@ -41,9 +41,12 @@ function App() {
       );
       const data = await response.json();
     console.log(data);
+    
+
+    
   return (
     <div>
-     <Header/>
+      <Header />
       <Cart />
       <Products title={productsArr[0].title} price={productsArr[0].price} imageUrl={productsArr[0].imageUrl} />
       <Products title={productsArr[1].title} price={productsArr[1].price} imageUrl={productsArr[1].imageUrl} />
@@ -60,7 +63,6 @@ function App() {
           </Route>
     </div>
   );
+    }
 }
-}
-
 export default App;
